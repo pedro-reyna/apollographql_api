@@ -17,12 +17,18 @@ const resolvers = {
 
     Mutation : {
         createContact : async (parent, args, context, info) => {
-            const { prenom, nom, courriel, telephone } = args;
+            const { prenom, nom, courriel, telephone, ville, province, codePostal, pays, commentaires1, commentaires2 } = args;
             const contact = new Contact({
                 prenom,
                 nom,
                 courriel,
-                telephone
+                telephone,
+                ville,
+                province,
+                codePostal,
+                pays,
+                commentaires1,
+                commentaires2
             });
             await contact.save()
             return contact;

@@ -18,6 +18,28 @@ const ContactSchema = new mongoose.Schema({
     telephone : {
         type : String,
         required : true
+    },
+    ville : {
+        type : String,
+        required : true
+    },
+    province : {
+        type : String,
+        required : true
+    },
+    codePostal : {
+        type : String,
+        required : true
+    },
+    pays : {
+        type : String,
+        required : true
+    },
+    commentaires1 : {
+        type : String
+    },
+    commentaires2 : {
+        type : String
     }
 });
 

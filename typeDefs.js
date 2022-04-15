@@ -9,6 +9,12 @@ const typeDefs = gql`
         nom: String!
         courriel: String!
         telephone: String!
+        ville: String!
+        province: String!
+        codePostal: String!
+        pays: String!
+        commentaires1: String
+        commentaires2: String
     }
 
     type Query {
@@ -32,7 +38,13 @@ const typeDefs = gql`
             prenom: String!,
             nom: String!,
             courriel: String!,
-            telephone: String!): Contact 
+            telephone: String!,
+            ville: String!,
+            province: String!,
+            codePostal: String!,
+            pays: String!,
+            commentaires1: String,
+            commentaires2: String): Contact 
             
         deleteContact(id: ID) : String
         
